@@ -7,24 +7,26 @@
     <meta content="" name="author">
     <meta content="" name="keywords">
     <title>PANDAWARE</title>
-    <meta content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" name="viewport">
+    <meta
+        content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi"
+        name="viewport">
 
     <!--CSS INCLUDES -->
 
     <link rel="icon" href="https://pngimage.net/wp-content/uploads/2018/06/white-ball-png-4.png">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link href="assets/css/bootstrap.min.css" media="all" rel="stylesheet" type="text/css">
     <link href="assets/css/style-dark.css" media="all" rel="stylesheet" type="text/css">
     <link href="assets/css/css.css" rel="stylesheet">
     <link href="assets/css/fontawesome-all.min.css" media="all" rel="stylesheet" type="text/css">
     <link href="assets/css/colors/yellow-2.css" media="screen" rel="stylesheet" title="yellow-2" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900%7CDosis:200,300,400,500,600,700,800%7COswald:300,400,700%7CMontserrat:400,700" rel="stylesheet" type="text/css">
+    <link
+        href="http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900%7CDosis:200,300,400,500,600,700,800%7COswald:300,400,700%7CMontserrat:400,700"
+        rel="stylesheet" type="text/css">
 </head>
 
 <body>
-
-    <div class="film-grain"></div>
-
     <div id="preloader">
         <div id="preloader-status">
             <div class="preloader-position preloader-effect">
@@ -37,7 +39,8 @@
         <div class="slide-YT hero-fullscreen">
             <div class="slide bg-img-YT"></div>
             <div id="videoContainment"></div>
-            <a class="player" data-property="{videoURL:'https://youtu.be/-z6tnA8DfG8', mute:false, showControls:false, quality:'default', opacity:0.7, containment:'#videoContainment', optimizeDisplay:true, loop:true, startAt:0, autoPlay:true, showYTLogo:false, addRaster:false, realfullscreen:true}"
+            <a class="player"
+                data-property="{videoURL:'https://youtu.be/33crJ6BiJ20', mute:true, showControls:false, quality:'default', opacity:0.7, containment:'#videoContainment', optimizeDisplay:true, loop:true, startAt:0, autoPlay:true, showYTLogo:false, addRaster:false, realfullscreen:true}"
                 id="bgndVideo"></a>
         </div>
         <div class="preload-content"></div>
@@ -47,6 +50,13 @@
         <button class="lines-button minus menu-toggle" id="main-menu-caller" type="button"><span
                 class="lines"></span></button>
     </div>
+
+    <audio autoplay loop>
+        <source src="1.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="film-grain"></div>
+
 
     <svg id="cursor" width="20" height="20">
         <defs>
@@ -223,13 +233,13 @@
                                 <span class="awesome-contact"><i class="fab fa-discord"> /COMING SOON</i></span>
                                 <p>
                                     ryudev<br>
-                                    <a>$name = ['ryudev'];#4117</a>
+                                    <a>undeath#2933</a>
                                     <a>| WebDeveloper<br></a>
                                     <a>| Cheapest Services<br></a>
                                 </p>
                                 <p>
                                     Panda<br>
-                                    <a>Pandas#2004</a>
+                                    <a>Pnda#1122</a>
                                     <a>| Reseller<br></a>
                                     <a>| Cheapest Resells<br></a>
                                 </p>
@@ -247,7 +257,7 @@
         var play = false;
         var vid = document.getElementById("muzica");
         vid.volume = 0.1;
-        window.addEventListener('keyup', function(e) {
+        window.addEventListener('keyup', function (e) {
             if (e.which == 69) {
                 vid.volume = Math.min(vid.volume + 0.1, 1);
             } else if (e.which == 65) {
