@@ -274,21 +274,20 @@
 
 <!-- Add the new script here -->
 <script>
-    window.onload = function() {
-        // IDs of the list items
-        var lines = ['line1', 'line2', 'line3'];
+    // Function to fetch lyrics and display a random line
+    function fetchAndDisplayRandomLyric() {
+        fetch('path/to/lyrics.txt') // Replace with the actual path to your lyrics.txt file
+            .then(response => response.text())
+            .then(data => {
+                var lines = data.split('\n');
+                var randomLine = lines[Math.floor(Math.random() * lines.length)];
+                document.getElementById('random-lyric').innerText = randomLine;
+            })
+            .catch(error => console.error('Error fetching lyrics:', error));
+    }
 
-        // Randomly select one ID
-        var randomLineId = lines[Math.floor(Math.random() * lines.length)];
-
-        // Hide all lines initially
-        lines.forEach(function(line) {
-            document.getElementById(line).style.display = 'none';
-        });
-
-        // Display only the randomly selected line
-        document.getElementById(randomLineId).style.display = 'block';
-    };
+    // Call the function when the window loads
+    window.onload = fetchAndDisplayRandomLyric;
 </script>
 
 <!--END OF JS SCRIPTS INCLUDE -->
