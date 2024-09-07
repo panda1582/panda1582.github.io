@@ -79,6 +79,17 @@
             padding-top: 100px;
         }
 
+        /* Adjust HWID Mask title and subheading size */
+        .fin-heading {
+            font-size: 48px; /* Adjust the size of HWID Mask heading */
+            line-height: 1.2;
+        }
+
+        .fin-subheading {
+            font-size: 24px; /* Smaller subheading */
+            margin-bottom: 20px;
+        }
+
         /* Video background opacity adjustment */
         .hero-bg::before {
             content: '';
@@ -188,18 +199,4 @@
     <script>
         var play = false;
         var vid = document.getElementById("muzica");
-        vid.volume = 0.1;
-        window.addEventListener('keyup', function (e) {
-            if (e.which == 69) {
-                vid.volume = Math.min(vid.volume + 0.1, 1);
-            } else if (e.which == 65) {
-                vid.volume = Math.max(vid.volume - 0.1, 0);
-            }
-        });
-    </script>
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
-    <script src="assets/js/plugins.js" type="text/javascript"></script>
-    <script src="assets/js/main.js" type="text/javascript"></script>
-</body>
-
-</html>
+        vid.volume = 0.1
