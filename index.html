@@ -21,6 +21,11 @@
 
     <!-- Custom Styles for this page -->
     <style>
+        /* Ensure default cursor */
+        body, * {
+            cursor: auto; /* Ensure default cursor for all elements */
+        }
+
         /* Style the purchase button */
         .btn-purchase {
             background-color: #8B0000; /* Dark red */
@@ -35,6 +40,7 @@
             text-align: center;
             border-radius: 5px;
             text-decoration: none;
+            cursor: pointer; /* Ensure pointer cursor on button */
         }
 
         /* Ensure scrolling is enabled */
@@ -161,40 +167,4 @@
                     <p>We provide top-quality service without breaking the bank. Our pricing is competitive, and we offer excellent value for money while maintaining high standards.</p>
                 </div>
             </div>
-        </div>
-    </div>
-
-    <!-- Footer Section -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <p>&copy; 2024 HWID Mask. All rights reserved.</p>
-                </div>
-                <div class="col-md-6 text-right">
-                    <a href="https://example.com/purchase" class="btn-purchase">Purchase Now</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- JS SCRIPTS INCLUDE -->
-    <script>
-        var play = false;
-        var vid = document.getElementById("muzica");
-        vid.volume = 0.1;
-        window.addEventListener('keyup', function (e) {
-            if (e.which == 69) {
-                vid.volume = Math.min(vid.volume + 0.1, 1);
-            } else if (e.which == 65) {
-                vid.volume = Math.max(vid.volume - 0.1, 0);
-            }
-        });
-    </script>
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
-    <script src="assets/js/plugins.js" type="text/javascript"></script>
-    <script src="assets/js/main.js" type="text/javascript"></script>
-</body>
-
-</html>
-
+ 
