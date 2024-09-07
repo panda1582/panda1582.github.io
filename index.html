@@ -18,9 +18,76 @@
 
     <!-- Preload critical assets -->
     <link rel="preload" href="assets/css/style-dark.css" as="style">
+
+    <!-- Custom Styles for this page -->
+    <style>
+        /* Style the purchase button */
+        .btn-purchase {
+            background-color: #8B0000; /* Dark red */
+            color: white;
+            font-size: 24px;
+            padding: 15px 30px;
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        /* Ensure scrolling is enabled */
+        body {
+            overflow-y: scroll;
+        }
+
+        /* Style for sections */
+        .section {
+            padding: 50px 0;
+        }
+
+        /* Align text properly */
+        h2, h3, p {
+            text-align: center;
+        }
+
+        /* Container max width for good readability */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* General content organization */
+        .hero-fullscreen {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        /* Fix for button overlapping */
+        .center-container-home {
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        /* Video background opacity adjustment */
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for better text visibility */
+        }
+    </style>
 </head>
 
 <body>
+
     <!-- Preloader -->
     <div id="preloader">
         <div id="preloader-status">
@@ -37,36 +104,27 @@
             <div id="videoContainment"></div>
             <a class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=3JbBbY4S11w', mute:true, showControls:false, quality:'default', opacity:0.7, containment:'#videoContainment', optimizeDisplay:true, loop:true, startAt:0, autoPlay:true, showYTLogo:false, addRaster:false, realfullscreen:true}" id="bgndVideo"></a>
         </div>
-        <div class="preload-content"></div>
 
-        <!-- Centered content with "Buy Now" button -->
+        <!-- Centered content with organized structure -->
         <div class="center-container-home">
-            <div class="center-block-home">
-                <div class="upper-content">
-                    <div class="container sections">
-                        <div class="row">
-                            <div class="fin-heading">
-                                <h1 class="fin-heading glitch">HWID Mask</h1>
-                            </div>
-                            <div class="fin-subheading">Stay Undetected, Stay Safe</div>
-                            <p>
-                                Our HWID Masking solution is designed to make sure your hardware identity remains undetectable. Whether you're gaming, accessing restricted content, or ensuring your privacy, our HWID Mask ensures that your system remains hidden from intrusive detection systems.
-                            </p>
-                            <div class="purchase-button-wrapper">
-                                <a href="https://example.com/purchase" class="btn btn-lg btn-warning" style="font-size: 24px; padding: 15px 30px; margin-top: 20px;">Purchase Now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="container">
+                <h1 class="fin-heading glitch">HWID Mask</h1>
+                <div class="fin-subheading">Stay Undetected, Stay Safe</div>
+                <p>
+                    Our HWID Masking solution is designed to make sure your hardware identity remains undetectable. Whether you're gaming, accessing restricted content, or ensuring your privacy, our HWID Mask ensures that your system remains hidden from intrusive detection systems.
+                </p>
             </div>
         </div>
     </div>
 
+    <!-- Purchase Button (Only one at the bottom center) -->
+    <a href="https://example.com/purchase" class="btn-purchase">Purchase Now</a>
+
     <!-- Why Choose Us Section -->
     <div class="section" id="why-choose-us">
         <div class="container">
+            <h2>Why Choose Us</h2>
             <div class="row">
-                <h2>Why Choose Us</h2>
                 <div class="col-md-6">
                     <h3>Undetectable Technology</h3>
                     <p>Our HWID Mask uses cutting-edge technology to ensure that your hardware remains completely invisible to detection systems. Stay ahead of the curve with our robust and constantly updated software.</p>
@@ -76,24 +134,14 @@
                     <p>We understand how crucial it is to stay undetected. That's why our support team is available 24/7 to help you with any issues or questions regarding your HWID Mask software.</p>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <h3>Easy to Use</h3>
-                    <p>Our software is designed to be user-friendly. With a simple installation process and intuitive interface, you’ll be able to mask your HWID in no time.</p>
-                </div>
-                <div class="col-md-6">
-                    <h3>Regular Updates</h3>
-                    <p>We continuously update our HWID Mask to keep up with the latest detection systems. You’ll always be ahead with our regularly maintained and improved software.</p>
-                </div>
-            </div>
         </div>
     </div>
 
     <!-- Why We Provide Better Services Section -->
     <div class="section" id="better-services">
         <div class="container">
+            <h2>Why We Provide Better Services</h2>
             <div class="row">
-                <h2>Why We Provide Better Services</h2>
                 <div class="col-md-6">
                     <h3>Experienced Developers</h3>
                     <p>Our team consists of seasoned developers with years of experience in the HWID spoofing and masking industry. We know how to keep you undetected and safe.</p>
@@ -124,7 +172,7 @@
                     <p>&copy; 2024 HWID Mask. All rights reserved.</p>
                 </div>
                 <div class="col-md-6 text-right">
-                    <a href="https://example.com/purchase" class="btn btn-warning">Purchase Now</a>
+                    <a href="https://example.com/purchase" class="btn-purchase">Purchase Now</a>
                 </div>
             </div>
         </div>
