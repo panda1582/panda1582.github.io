@@ -226,7 +226,7 @@
                     </div>
                     <div class="product-info">
                         <h2 class="product-title">R6 Lite Chams</h2>
-                        <p class="product-price">$4.99</p>
+                        <p class="product-price">$49.99</p>
                         <button class="btn-purchase" onclick="showVariants(this)">Buy Now</button>
                         <div class="variant-container">
                             <a href="https://actavischeats.sell.app/product/r6lite-1day" target="_blank">1-Day License</a>
@@ -241,11 +241,11 @@
             <div class="col-md-4">
                 <div class="product-card animate__animated animate__fadeInUp animate__delay-1s">
                     <div class="product-image">
-                        <img src="https://i.postimg.cc/WzDR9FQS/Capture.png" alt="Product 2">
+                        <img src="https://via.placeholder.com/300x300" alt="Product 2">
                     </div>
                     <div class="product-info">
-                        <h2 class="product-title">Undetected Spoofer</h2>
-                        <p class="product-price">$4.99</p>
+                        <h2 class="product-title">Product 2</h2>
+                        <p class="product-price">$79.99</p>
                         <button class="btn-purchase" onclick="showVariants(this)">Buy Now</button>
                         <div class="variant-container">
                             <a href="#" target="_blank">1-Day License</a>
@@ -260,11 +260,11 @@
             <div class="col-md-4">
                 <div class="product-card animate__animated animate__fadeInUp animate__delay-2s">
                     <div class="product-image">
-                        <img src="https://i.postimg.cc/Yq67Tgvy/download.png" alt="Product 3">
+                        <img src="https://via.placeholder.com/300x300" alt="Product 3">
                     </div>
                     <div class="product-info">
-                        <h2 class="product-title">R6 NFA Account</h2>
-                        <p class="product-price">$4.99</p>
+                        <h2 class="product-title">Product 3</h2>
+                        <p class="product-price">$99.99</p>
                         <button class="btn-purchase" onclick="showVariants(this)">Buy Now</button>
                         <div class="variant-container">
                             <a href="#" target="_blank">1-Day License</a>
@@ -289,6 +289,20 @@
             variantContainer.style.display = variantContainer.style.display === 'block' ? 'none' : 'block';
         }
     </script>
+<script>
+    // Disable right-click context menu
+    document.addEventListener('contextmenu', event => event.preventDefault());
+
+    // Disable specific key combinations like Ctrl+U and Ctrl+Shift+I
+    document.addEventListener('keydown', event => {
+        if (event.ctrlKey && (event.key === 'u' || event.key === 'U' || event.key === 'i' || event.key === 'I' || event.key === 's')) {
+            event.preventDefault();
+        }
+        if (event.ctrlKey && event.shiftKey && (event.key === 'i' || event.key === 'I' || event.key === 'c' || event.key === 'C')) {
+            event.preventDefault();
+        }
+    });
+</script>
 </body>
 
 </html>
