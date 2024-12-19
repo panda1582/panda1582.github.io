@@ -199,34 +199,41 @@
     </style>
 
     <!-- Protection Scripts -->
-    <script>
-        // Disable right-click
-        document.addEventListener('contextmenu', event => event.preventDefault());
+<script>
+    // Disable right-click
+    document.addEventListener('contextmenu', event => event.preventDefault());
 
-        // Disable common DevTools shortcuts
-        document.addEventListener('keydown', event => {
-            if (
-                event.key === 'F12' ||
-                (event.ctrlKey && event.shiftKey && event.key === 'I') ||
-                (event.ctrlKey && event.shiftKey && event.key === 'J') ||
-                (event.ctrlKey && event.key === 'U')
-            ) {
-                event.preventDefault();
-            }
-        });
+    // Disable common DevTools shortcuts
+    document.addEventListener('keydown', event => {
+        if (
+            event.key === 'F12' ||
+            (event.ctrlKey && event.shiftKey && event.key === 'I') ||
+            (event.ctrlKey && event.shiftKey && event.key === 'J') ||
+            (event.ctrlKey && event.key === 'U')
+        ) {
+            event.preventDefault();
+        }
+    });
 
-        // Detect if DevTools is open
-        (function() {
-            const devtools = /./;
-            devtools.toString = function() {
-                this.opened = true;
+    // Detect if DevTools is open
+    (function() {
+        let devtoolsOpened = false;
+        const devtools = /./;
+        devtools.toString = function() {
+            devtoolsOpened = true;
+            if (!alerted) {
+                alerted = true;
                 alert("Developer tools are disabled on this site.");
-            };
-            setInterval(() => {
-                console.log(devtools);
-            }, 1000);
-        })();
-    </script>
+            }
+        };
+
+        let alerted = false;
+        setInterval(() => {
+            console.log(devtools);
+        }, 1000);
+    })();
+</script>
+
 </head>
 
 <body>
