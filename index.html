@@ -99,34 +99,30 @@
             background-color: #666;
         }
 
-        footer {
-            background: #1a1a1a;
+        .variant-container {
+            display: none;
+            background: rgba(0, 0, 0, 0.8);
             color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
             text-align: center;
-            padding: 20px 0;
-            position: relative;
-            z-index: 10;
+            animation: fadeIn 0.5s ease;
         }
 
-        .discord {
-            text-align: center;
-            margin: 20px auto;
+        .variant-container a {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            background: #444;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+            transition: background-color 0.3s;
         }
 
-        .discord img {
-            width: 50px;
-            height: auto;
-            margin-right: 10px;
-            vertical-align: middle;
-        }
-
-        .particles {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
+        .variant-container a:hover {
+            background: #666;
         }
 
         @keyframes fadeInOut {
@@ -135,6 +131,15 @@
             }
             50% {
                 opacity: 0.5;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
             }
         }
     </style>
@@ -163,7 +168,12 @@
                     <div class="product-info">
                         <h2 class="product-title">R6 Lite Chams</h2>
                         <p class="product-price">$49.99</p>
-                        <a href="#" class="btn-purchase">Buy Now</a>
+                        <button class="btn-purchase" onclick="showVariants(this)">Buy Now</button>
+                        <div class="variant-container">
+                            <a href="https://actavischeats.sell.app/product/r6lite-1day" target="_blank">1-Day License</a>
+                            <a href="https://actavischeats.sell.app/product/product-1733714154" target="_blank">7-Day License</a>
+                            <a href="https://actavischeats.sell.app/product/product-1733637092" target="_blank">30-Day License</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -177,7 +187,12 @@
                     <div class="product-info">
                         <h2 class="product-title">Product 2</h2>
                         <p class="product-price">$79.99</p>
-                        <a href="#" class="btn-purchase">Buy Now</a>
+                        <button class="btn-purchase" onclick="showVariants(this)">Buy Now</button>
+                        <div class="variant-container">
+                            <a href="#" target="_blank">Option 1</a>
+                            <a href="#" target="_blank">Option 2</a>
+                            <a href="#" target="_blank">Option 3</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -191,7 +206,12 @@
                     <div class="product-info">
                         <h2 class="product-title">Product 3</h2>
                         <p class="product-price">$99.99</p>
-                        <a href="#" class="btn-purchase">Buy Now</a>
+                        <button class="btn-purchase" onclick="showVariants(this)">Buy Now</button>
+                        <div class="variant-container">
+                            <a href="#" target="_blank">Option 1</a>
+                            <a href="#" target="_blank">Option 2</a>
+                            <a href="#" target="_blank">Option 3</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -212,6 +232,11 @@
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script>
         particlesJS.load('particles-js', 'https://cdn.jsdelivr.net/gh/VincentGarreau/particles.js/particles.json');
+
+        function showVariants(button) {
+            const variantContainer = button.nextElementSibling;
+            variantContainer.style.display = variantContainer.style.display === 'block' ? 'none' : 'block';
+        }
     </script>
 </body>
 
