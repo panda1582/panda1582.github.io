@@ -29,10 +29,17 @@
             text-align: center;
         }
 
+        header .header-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+
         header h1 {
             font-size: 3rem;
             font-weight: 800;
-            margin-bottom: 10px;
+            margin: 0;
         }
 
         header p {
@@ -44,6 +51,33 @@
             font-size: 1.5rem;
             color: #ffcc00;
             font-weight: 600;
+        }
+
+        .discord-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .discord-section img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        .discord-section a {
+            background-color: #5865F2;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .discord-section a:hover {
+            background-color: #4752C4;
         }
 
         .product-card {
@@ -89,7 +123,7 @@
 
         .product-price {
             font-size: 1.75rem;
-            color: #2a9d8f;
+            color: #ffcc00;
             font-weight: 700;
             margin-bottom: 20px;
         }
@@ -157,14 +191,26 @@
             margin: 0;
             font-size: 0.9rem;
         }
+
+        .logo {
+            width: 80px;
+            height: auto;
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>Actavis Store</h1>
+        <div class="header-content">
+            <img class="logo" src="https://1000logos.net/wp-content/uploads/2016/10/Actavis-Logo-1984.png" alt="Actavis Logo">
+            <h1>Actavis Store</h1>
+        </div>
         <p>Your Ultimate Shopping Experience</p>
         <p class="promo">Use Promo Code <strong>SALE10</strong> for 10% Off!</p>
+        <div class="discord-section">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Discord_logo.svg" alt="Discord Logo">
+            <a href="#" target="_blank">Join Our Discord</a>
+        </div>
     </header>
 
     <main class="container py-5">
@@ -202,9 +248,9 @@
                         <p class="product-price">$79.99</p>
                         <button class="btn-purchase" onclick="showVariants(this)">Buy Now</button>
                         <div class="variant-container">
-                            <a href="#" target="_blank">Option 1</a>
-                            <a href="#" target="_blank">Option 2</a>
-                            <a href="#" target="_blank">Option 3</a>
+                            <a href="#" target="_blank">1-Day License</a>
+                            <a href="#" target="_blank">7-Day License</a>
+                            <a href="#" target="_blank">30-Day License</a>
                         </div>
                     </div>
                 </div>
@@ -221,9 +267,9 @@
                         <p class="product-price">$99.99</p>
                         <button class="btn-purchase" onclick="showVariants(this)">Buy Now</button>
                         <div class="variant-container">
-                            <a href="#" target="_blank">Option 1</a>
-                            <a href="#" target="_blank">Option 2</a>
-                            <a href="#" target="_blank">Option 3</a>
+                            <a href="#" target="_blank">1-Day License</a>
+                            <a href="#" target="_blank">7-Day License</a>
+                            <a href="#" target="_blank">30-Day License</a>
                         </div>
                     </div>
                 </div>
